@@ -1,10 +1,11 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
+<jsp:include page="../../include/scripts.jsp"/>
     <title>Spring MVC Form Handling</title>
 </head>
 <body>
-
+<%@ include file="../../include/navbar.jsp" %>
 <h2>Submitted Car Information</h2>
    <table>
     <tr>
@@ -24,5 +25,13 @@
     	<td>${price}</td>
     </tr>
 </table>  
+<!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Vaaasin & Co 2016</p>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>

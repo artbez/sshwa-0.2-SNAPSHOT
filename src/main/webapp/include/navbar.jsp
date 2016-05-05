@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<c:url value="/Web/robots/index.jsp"/>">Home</a>
+            <a class="navbar-brand" href="<c:url value="/helloworld"/>">Home</a>
         </div>
         <div class="navbar-collapse collapse">
 
@@ -19,8 +19,9 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cars<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                    	<li><a href="<c:url value="seeCars"/>">See cars</a></li>
-                        <li><a href="<c:url value="addCar"/>">Add car</a></li>
+                    	<li><a href="<c:url value="/forall/seeCars"/>">See cars</a></li>
+                        <li><a href="<c:url value="/protected/addCar"/>">Add car</a></li>
+                        <li><a href="<c:url value="/protected/deleteCar"/>">Delete car</a></li>
                     </ul>
                 </li>
 
@@ -28,26 +29,12 @@
 
             <ul class="nav navbar-nav navbar-right">
 
-                <sec:authorize access="isAuthenticated()">
-
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i
-                                class="glyphicon glyphicon-user"></i>
-                            <sec:authentication property="name"/>
-                            <span class="caret"></span>
-                        </a>
-                        <ul id="g-account-menu" class="dropdown-menu" role="menu">
-                            <li><a href="#">My Profile</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="${logout}">
-                            <i class="glyphicon glyphicon-lock"></i>
-                            Logout
-                        </a>
+                    
+                    <li> <a href="<c:url value="/logout" />"><i class="glyphicon glyphicon-lock"></i>
+                            Logout</a>
+                       
                     </li>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </sec:authorize>
             </ul>
 
         </div>

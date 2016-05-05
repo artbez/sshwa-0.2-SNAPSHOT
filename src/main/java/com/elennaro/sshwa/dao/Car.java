@@ -5,7 +5,7 @@ import javax.persistence.*;
 import org.springframework.web.multipart.MultipartFile;
 
 @Entity
-@Table(name = "car")
+@Table(name = "ncar")
 public class Car {
     @Id 
     @GeneratedValue
@@ -24,10 +24,9 @@ public class Car {
     @Column(name = "price")
     private int price;
 
-
-  //  @Lob
-  //  @Column(name = "image", columnDefinition="longblob")
-  //  private byte[] image;
+    @Lob
+    @Column(name = "image", columnDefinition="longblob")
+    private byte[] image;
     
     public Car() {}
     public int getId() {
@@ -59,6 +58,12 @@ public class Car {
     }
     public void setPrice( int price ) {
         this.price = price;
+    }
+    public byte[] getImage() {
+    	return image;
+    }
+    public void setImage(byte[] image) {
+    	this.image = image;
     }
     
 }

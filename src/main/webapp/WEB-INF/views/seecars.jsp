@@ -21,19 +21,20 @@
 			<c:forEach items="${cars}" var="item">
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="" onclick="$('#listOfCarProp').toggle();">
-                    <ul class="list-group" style="display: none" id="listOfCarProp">
+                    <img id="ItemPreview" class="img-responsive" src="/sshwa/imageController/${item.id}"  alt="" onclick="$('#listOfCarProp-${item.id}').toggle();">
+                  
+                    <ul class="list-group" style="display: none" id="listOfCarProp-${item.id}">
   						<li class="list-group-item">
-    						${item.carMake}
+    						Car make: ${item.carMake}
   						</li>
 			  			<li class="list-group-item">
-			    			${item.mileage}
+			    			Mileage: ${item.mileage}
 			  			</li>
 			  			<li class="list-group-item">
-			    			${item.year}
+			    			Year: ${item.year}
 			  			</li>
 			  			<li class="list-group-item">
-			    			${item.price}
+			    			Price: ${item.price}
 			  			</li>
 					</ul>
 		        </a>
@@ -48,7 +49,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Vaaasin & Co 2016</p>
                 </div>
             </div>
         </footer>

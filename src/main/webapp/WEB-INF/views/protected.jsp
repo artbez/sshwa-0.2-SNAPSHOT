@@ -20,8 +20,13 @@
 		</h2>
 		<div>Get <a href="protected">protected</a> resource for admin.</div>
 		<div>Get <a href="confidential">confidential</a> resource for superadmin.</div>
-		<footer>
-			<div>Updated by Alex Art from <a href="https://in2circle.com" target="_blank">in2circle.com</a></div>
-		</footer>
+		<!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Vaaasin & Co 2016</p>
+                </div>
+            </div>
+        </footer>
 	</body>
 </html>
