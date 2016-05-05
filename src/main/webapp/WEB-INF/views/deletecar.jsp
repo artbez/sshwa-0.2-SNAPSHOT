@@ -4,7 +4,7 @@
 <html>
 <head>
 <jsp:include page="../../include/scripts.jsp"/>
-<title>Spring MVC Form Handling</title>
+<title>Delete car page</title>
 
 </head>
 <body>

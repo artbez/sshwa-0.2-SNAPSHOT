@@ -128,6 +128,11 @@ public class AppController {
 		return new ModelAndView("deletecar");
 	}
 	
+	@RequestMapping(value = "/about", method = RequestMethod.GET)
+	public ModelAndView about() {
+		return new ModelAndView("about");
+	}
+	
 	@RequestMapping(value = "/deleteCurCar", method = RequestMethod.POST)
 	public String getCurrentCar(@RequestParam int carId, ModelMap model) {
 		carDao.delete(carId);

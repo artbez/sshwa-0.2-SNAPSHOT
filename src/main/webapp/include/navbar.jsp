@@ -26,6 +26,7 @@
                 </li>
 
             </ul>
+            <a class="navbar-brand" href="<c:url value="/about"/>">About</a>
 
             <ul class="nav navbar-nav navbar-right">
 

@@ -4,7 +4,7 @@
 <html>
 <head>	
 	<jsp:include page="../../include/scripts.jsp"/>
-	<title>Hello World</title>
+	<title>See cars</title>
 </head>
 
 	<body>

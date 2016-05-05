@@ -2,7 +2,7 @@
 <html>
 <head>
 <jsp:include page="../../include/scripts.jsp"/>
-    <title>Spring MVC Form Handling</title>
+    <title>Added</title>
 </head>
 <body>
 <%@ include file="../../include/navbar.jsp" %>
