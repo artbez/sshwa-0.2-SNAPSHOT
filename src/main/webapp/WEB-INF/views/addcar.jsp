@@ -4,6 +4,7 @@
 <html>
 <head>
 <title>Spring MVC Form Handling</title>
+
 </head>
 <body>
 
@@ -27,9 +28,15 @@
 				<td><form:label path="price">Price</form:label></td>
 				<td><form:input path="price" /></td>
 			</tr>
+			<!--  <tr>
+			<th><label for="image">Image (in JPEG format only):</label></th>
+			<td><input name="image" type="file"/>
+			</tr>-->
+		
 			<tr>
 				<td colspan="2"><input type="submit" value="Submit" /></td>
 			</tr>
+			
 		</table>
 	</form:form>
 </body>

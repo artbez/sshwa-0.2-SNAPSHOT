@@ -19,6 +19,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cars<b class="caret"></b></a>
                     <ul class="dropdown-menu">
+                    	<li><a href="<c:url value="seeCars"/>">See cars</a></li>
                         <li><a href="<c:url value="addCar"/>">Add car</a></li>
                     </ul>
                 </li>

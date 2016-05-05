@@ -12,10 +12,14 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -45,6 +49,15 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
+    @Bean @Scope(value = WebApplicationContext.SCOPE_SESSION,
+            proxyMode = ScopedProxyMode.TARGET_CLASS)
+     public CommonsMultipartResolver getMultipartResolver() {
+         CommonsMultipartResolver mr = new CommonsMultipartResolver();
+       
+         mr.setMaxUploadSize(10000);
+        
+         return mr;
+     }
     
     @Bean
 	public InternalResourceViewResolver viewResolver() {

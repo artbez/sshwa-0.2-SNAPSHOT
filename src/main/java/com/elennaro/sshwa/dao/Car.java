@@ -2,8 +2,10 @@ package com.elennaro.sshwa.dao;
 
 import javax.persistence.*;
 
+import org.springframework.web.multipart.MultipartFile;
+
 @Entity
-@Table(name = "CAR")
+@Table(name = "car")
 public class Car {
     @Id 
     @GeneratedValue
@@ -22,6 +24,11 @@ public class Car {
     @Column(name = "price")
     private int price;
 
+
+  //  @Lob
+  //  @Column(name = "image", columnDefinition="longblob")
+  //  private byte[] image;
+    
     public Car() {}
     public int getId() {
         return id;
@@ -53,4 +60,5 @@ public class Car {
     public void setPrice( int price ) {
         this.price = price;
     }
+    
 }

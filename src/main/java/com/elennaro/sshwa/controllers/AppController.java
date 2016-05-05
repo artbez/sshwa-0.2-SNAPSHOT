@@ -1,5 +1,9 @@
 package com.elennaro.sshwa.controllers;
 
+import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
@@ -68,5 +72,11 @@ public class AppController {
 	    model.addAttribute("year", car.getYear());
 	    model.addAttribute("price", car.getPrice());
 	    return "result";
+	}
+	
+	@RequestMapping(value = "/seeCars", method = RequestMethod.GET)
+	public ModelAndView seeCars() {
+		List<Car> mList = carDao.list();
+	    return new ModelAndView("seecars", "cars", mList);
 	}
 }
