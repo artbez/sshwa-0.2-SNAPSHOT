@@ -7,7 +7,7 @@ public interface CarDao {
      
     public Car get(int id);
      
-    public void saveOrUpdate(Car user);
+    public void saveOrUpdate(Car car);
      
     public void delete(int id);
 }
