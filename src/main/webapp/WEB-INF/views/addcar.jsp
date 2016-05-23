@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -9,32 +10,41 @@
 </head>
 <body>
 <%@ include file="../../include/navbar.jsp" %>
+<style>
+   body { 
+   		margin: 0; /* Убираем отступы */
+   }.mine {
+   		margin: 2%;
+   }
+   
+ </style>
+<div class = "mine">	
 	<h2>Car Information</h2>
 	<form:form method="POST" action="/sshwa/getCurrentCar" enctype="multipart/form-data">
 	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
-		<table>
+		<table cellpadding=10>
 			<tr>
 				<td>Car make</td>
 				<td><input name="carMake" /></td>
 			</tr>
 			<tr>
 				<td>Mileage</td>
-				<td><input name="mileage" /></td>
+				<td><input type="number" name="mileage" /></td>
 			</tr>
 			<tr>
 				<td>Year of creation</td>
-				<td><input name="year" /></td>
+				<td><input  type="number" name="year" /></td>
 			</tr>
 			<tr>
 				<td>Price</td>
-				<td><input name="price" /></td>
+				<td><input type="number" name="price" /></td>
 			</tr>
 			 <tr>
 			<th>Image (in JPEG format only):</th>
 			<td><input name="fileUpload" type="file"/>
 			</tr>
 		
-			<tr>
+			<tr >
 				<td colspan="2"><input type="submit" value="Submit" /></td>
 			</tr>
 			
@@ -48,5 +58,6 @@
                 </div>
             </div>
         </footer>
+</div>
 </body>
 </html>

@@ -135,7 +135,10 @@ public class AppController {
 	
 	@RequestMapping(value = "/deleteCurCar", method = RequestMethod.POST)
 	public String getCurrentCar(@RequestParam int carId, ModelMap model) {
-		carDao.delete(carId);
-		return "helloworld";
+		if (carDao.get(carId) != null) {
+			carDao.delete(carId);
+			return "helloworld";
+		}
+		return "error";
 	}
 }

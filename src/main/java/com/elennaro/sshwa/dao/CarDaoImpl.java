@@ -26,11 +26,11 @@ public class CarDaoImpl implements CarDao {
     @Transactional
     public List<Car> list() {
         @SuppressWarnings("unchecked")
-        List<Car> listUser = (List<Car>) sessionFactory.getCurrentSession()
+        List<Car> listCar = (List<Car>) sessionFactory.getCurrentSession()
                 .createCriteria(Car.class)
                 .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
  
-        return listUser;
+        return listCar;
     }
  
     @Override

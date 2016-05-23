@@ -6,7 +6,16 @@
 </head>
 <body>
 <%@ include file="../../include/navbar.jsp" %>
-<h2>About us</h2>
+<style>
+   body { 
+   		margin: 0; /* Убираем отступы */
+   }.mine {
+   		margin: 2%;
+   }
+</style>
+ <div class="mine">
+ <h2>About us</h2>
+
    <table>
     <tr>
         <td><img src="resources/images/dima.jpg" alt="Dima" class="img-rounded" width="400" height="250"></td>
@@ -44,5 +53,6 @@
                 </div>
             </div>
         </footer>
+ </div>
 </body>
 </html>

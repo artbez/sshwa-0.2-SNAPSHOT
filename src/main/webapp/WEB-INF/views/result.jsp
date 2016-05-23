@@ -6,6 +6,14 @@
 </head>
 <body>
 <%@ include file="../../include/navbar.jsp" %>
+<style>
+   body { 
+   		margin: 0; /* Убираем отступы */
+   }.mine {
+   		margin: 2%;
+   }
+ </style>
+ <div class = "mine">
 <h2>Submitted Car Information</h2>
    <table>
     <tr>
@@ -33,5 +41,6 @@
                 </div>
             </div>
         </footer>
+ </div>
 </body>
 </html>

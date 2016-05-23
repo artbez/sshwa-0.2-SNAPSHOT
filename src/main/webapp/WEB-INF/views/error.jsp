@@ -4,29 +4,26 @@
 	<head>
 		<base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		 <jsp:include page="../../include/scripts.jsp"/>
+		<jsp:include page="../../include/scripts.jsp"/>
 		<title>Car Market</title>
-		
 	</head>
 	<body>
-	    <%@ include file="../../include/navbar.jsp" %> 	
-	    <style>
-   		body { 
-   		 margin: 0; /* Убираем отступы */
-   		}.mine {
-   		 	margin: 2%;
-   		 }
- 		 </style>
- 		<div class="mine">
+		<%@ include file="../../include/navbar.jsp" %>
+		<style>
+   body { 
+   		margin: 0; /* Убираем отступы */
+   }.mine {
+   		margin: 2%;
+   }
+ </style>
+ <div class = "mine">
 		<header>
-			<h1>Title : Here car market application </h1>
+			<h1>Error </h1>
 		</header>
 		<p>
-			Here you can see all added cars if you are registered as user. To do this choose "see cars" in the bottom menu. 
+			Your data is not correct. 
 		</p>
 		<p>
-		Also if you are admin, you can add new cars and delete existing. 
-		</p>
 		<!-- Footer -->
         <footer>
             <div class="row">
@@ -35,6 +32,6 @@
                 </div>
             </div>
         </footer>
-        </div>
+</div>
 	</body>
 </html>

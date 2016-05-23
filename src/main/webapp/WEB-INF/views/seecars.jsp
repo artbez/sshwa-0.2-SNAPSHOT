@@ -9,7 +9,14 @@
 
 	<body>
 		<%@ include file="../../include/navbar.jsp" %>
-		
+<style>
+   body { 
+   		margin: 0; /* Убираем отступы */
+   }.mine {
+   		margin: 2%;
+   }
+ </style>
+
 	 <!-- Page Content -->
     <div class="container">
 		
@@ -24,6 +31,9 @@
                     <img id="ItemPreview" class="img-responsive" src="/sshwa/imageController/${item.id}"  alt="" onclick="$('#listOfCarProp-${item.id}').toggle();">
                   
                     <ul class="list-group" style="display: none" id="listOfCarProp-${item.id}">
+  						<li class="list-group-item">
+    						Id: ${item.id}
+  						</li>
   						<li class="list-group-item">
     						Car make: ${item.carMake}
   						</li>
@@ -55,5 +65,6 @@
         </footer>
 
     </div>
+
 </body>
 </html>
